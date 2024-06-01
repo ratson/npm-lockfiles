@@ -1,0 +1,96 @@
+{
+  "name": "@frat/markdown-toc",
+  "description": "Generate a markdown TOC (table of contents) with Remarkable.",
+  "version": "1.3.0",
+  "repository": "ratson/markdown-toc",
+  "license": "MIT",
+  "files": [
+    "cli.js",
+    "index.js",
+    "lib"
+  ],
+  "main": "index.js",
+  "bin": {
+    "markdown-toc": "cli.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "concat-stream": "^2.0.0",
+    "diacritics-map": "^0.1.0",
+    "gray-matter": "^4.0.3",
+    "lazy-cache": "^2.0.2",
+    "list-item": "^2.0.0",
+    "markdown-link": "^0.1.1",
+    "minimist": "^1.2.8",
+    "mixin-deep": "^2.0.1",
+    "object.pick": "^1.3.0",
+    "remarkable": "^2.0.1",
+    "repeat-string": "^1.6.1",
+    "strip-color": "^0.1.0"
+  },
+  "devDependencies": {
+    "gulp-format-md": "^2.0.0",
+    "mocha": "^10.4.0"
+  },
+  "keywords": [
+    "anchor",
+    "API documentation",
+    "code documentation",
+    "commonmark",
+    "content navigation",
+    "content organization",
+    "developer tools",
+    "docs",
+    "document structure",
+    "document",
+    "documentation tool",
+    "documentation",
+    "glossary",
+    "heading",
+    "headings",
+    "index",
+    "javascript",
+    "links",
+    "markdown parser",
+    "markdown tools",
+    "Markdown-based",
+    "markdown-toc",
+    "markdown",
+    "markup language",
+    "md files",
+    "md parser",
+    "md-toc",
+    "md",
+    "node.js",
+    "npm",
+    "open-source",
+    "outline",
+    "package.json",
+    "plugin",
+    "README tool",
+    "readme",
+    "reference",
+    "remarkable",
+    "remarkableplugin",
+    "render",
+    "renderer",
+    "structure",
+    "table of contents",
+    "table-of-contents",
+    "table",
+    "toc-generator",
+    "toc",
+    "write"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
