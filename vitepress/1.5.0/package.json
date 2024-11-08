@@ -1,0 +1,88 @@
+{
+  "name": "vitepress",
+  "version": "1.5.0",
+  "description": "Vite & Vue powered static site generator",
+  "keywords": [
+    "vite",
+    "vue",
+    "vitepress"
+  ],
+  "homepage": "https://vitepress.dev/",
+  "bugs": {
+    "url": "https://github.com/vuejs/vitepress/issues"
+  },
+  "repository": "github:vuejs/vitepress",
+  "license": "MIT",
+  "author": "Evan You",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./dist/node/index.js"
+    },
+    "./dist/*": "./dist/*",
+    "./package.json": "./package.json",
+    "./client": {
+      "types": "./client.d.ts",
+      "default": "./dist/client/index.js"
+    },
+    "./theme": {
+      "types": "./theme.d.ts",
+      "default": "./dist/client/theme-default/index.js"
+    },
+    "./theme-without-fonts": {
+      "types": "./theme-without-fonts.d.ts",
+      "default": "./dist/client/theme-default/without-fonts.js"
+    },
+    "./vue-demi": {
+      "default": "./lib/vue-demi.mjs"
+    }
+  },
+  "main": "dist/node/index.js",
+  "types": "types/index.d.ts",
+  "bin": {
+    "vitepress": "bin/vitepress.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "types",
+    "template",
+    "client.d.ts",
+    "theme.d.ts",
+    "theme-without-fonts.d.ts",
+    "lib"
+  ],
+  "dependencies": {
+    "@docsearch/css": "^3.6.2",
+    "@docsearch/js": "^3.6.2",
+    "@iconify-json/simple-icons": "^1.2.10",
+    "@shikijs/core": "^1.22.2",
+    "@shikijs/transformers": "^1.22.2",
+    "@shikijs/types": "^1.22.2",
+    "@types/markdown-it": "^14.1.2",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vue/devtools-api": "^7.5.4",
+    "@vue/shared": "^3.5.12",
+    "@vueuse/core": "^11.1.0",
+    "@vueuse/integrations": "^11.1.0",
+    "focus-trap": "^7.6.0",
+    "mark.js": "8.11.1",
+    "minisearch": "^7.1.0",
+    "shiki": "^1.22.2",
+    "vite": "^5.4.10",
+    "vue": "^3.5.12"
+  },
+  "peerDependencies": {
+    "markdown-it-mathjax3": "^4",
+    "postcss": "^8"
+  },
+  "peerDependenciesMeta": {
+    "markdown-it-mathjax3": {
+      "optional": true
+    },
+    "postcss": {
+      "optional": true
+    }
+  }
+}
