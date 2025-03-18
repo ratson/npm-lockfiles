@@ -7,6 +7,7 @@ const pkgNames = [
   "@angular/language-server",
   "@astrojs/ts-plugin",
   "@frat/markdown-toc",
+  "@ts-for-gir/cli",
   "@vtsls/language-server",
   "vitepress",
 ];
@@ -40,8 +41,6 @@ async function main() {
       await write(pkgFile, pkgText);
       console.log(pkgFile.name);
     }
-
-    await $`bunx clean-pkg-json`.cwd(pkgDir);
 
     await $`npm i --package-lock-only --omit dev --omit optional`
       .cwd(pkgDir);
