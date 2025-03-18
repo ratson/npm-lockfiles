@@ -1,0 +1,17 @@
+name: Update
+
+on:
+  schedule:
+    - cron: "1 2 3 * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
+      - run: bun .github/update.ts
