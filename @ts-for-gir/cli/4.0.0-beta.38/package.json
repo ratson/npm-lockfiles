@@ -1,0 +1,82 @@
+{
+  "name": "@ts-for-gir/cli",
+  "version": "4.0.0-beta.38",
+  "description": "TypeScript type definition generator for GObject introspection GIR files",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "type": "module",
+  "bin": {
+    "cli": "bin/ts-for-gir",
+    "ts-for-gir": "bin/ts-for-gir",
+    "ts-for-gir-dev": "bin/ts-for-gir-dev"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bin/ts-for-gir-dev",
+    "start:prod": "node bin/ts-for-gir",
+    "build": "node --experimental-specifier-resolution=node --experimental-strip-types --experimental-transform-types --no-warnings esbuild.ts && chmod +x bin/ts-for-gir-dev && chmod +x bin/ts-for-gir",
+    "check:types": "tsc --noEmit",
+    "check:deps": "dpdm -T src/index.ts",
+    "check": "yarn check:types && yarn check:deps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gjsify/ts-for-gir.git"
+  },
+  "author": "Pascal Garber <pascal@mailfreun.de>",
+  "files": [
+    "src",
+    "bin"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gjsify/ts-for-gir/issues"
+  },
+  "homepage": "https://github.com/gjsify/ts-for-gir#readme",
+  "keywords": [
+    "gjs",
+    "typescript",
+    "generate",
+    "gir",
+    "gobject-introspection",
+    "gnome",
+    "gtk",
+    "glib",
+    "gobject",
+    "dts",
+    "type definitions",
+    "cli"
+  ],
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "devDependencies": {
+    "@gi.ts/parser": "^4.0.0-beta.38",
+    "@ts-for-gir/generator-base": "^4.0.0-beta.38",
+    "@ts-for-gir/generator-html-doc": "^4.0.0-beta.38",
+    "@ts-for-gir/generator-json": "^4.0.0-beta.38",
+    "@ts-for-gir/generator-typescript": "^4.0.0-beta.38",
+    "@ts-for-gir/lib": "^4.0.0-beta.38",
+    "@ts-for-gir/reporter": "^4.0.0-beta.38",
+    "@types/ejs": "^3.1.5",
+    "@types/inquirer": "^9.0.9",
+    "@types/node": "^24.5.2",
+    "@types/yargs": "^17.0.33",
+    "dpdm": "^3.14.0",
+    "esbuild": "^0.25.10",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.8.6",
+    "@ts-for-gir/templates": "^4.0.0-beta.38",
+    "colorette": "^2.0.20",
+    "cosmiconfig": "^9.0.0",
+    "ejs": "^3.1.10",
+    "glob": "^11.0.3",
+    "inquirer": "^12.9.6",
+    "prettier": "^3.6.2",
+    "yargs": "^18.0.0"
+  }
+}
